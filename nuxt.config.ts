@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  modules: ['shadcn-nuxt', '@vueuse/nuxt', '@nuxt/fonts'],
+  modules: ['shadcn-nuxt', '@vueuse/nuxt', '@nuxt/fonts', '@clerk/nuxt'],
   shadcn: {
     prefix: '',
     componentDir: '@/components/ui',
