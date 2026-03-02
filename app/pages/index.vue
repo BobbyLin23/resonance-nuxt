@@ -3,11 +3,13 @@
 </script>
 
 <template>
-  <div class="flex min-h-screen flex-col items-center justify-center gap-4 bg-background">
-    <h1>Welcome to Resonance</h1>
-    <div class="flex items-center gap-4">
-      <OrganizationSwitcher />
-      <UserButton />
+  <div class="relative">
+    <PageHeader title="Dashboard" class="lg:hidden" />
+    <DashboardHeroPattern />
+    <div class="relative space-y-8 p-4 lg:p-16">
+      <DashboardHeader />
+      <DashboardTextInputPanel />
+      <DashboardQuickActionsPanel />
     </div>
   </div>
 </template>
