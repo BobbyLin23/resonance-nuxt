@@ -20,13 +20,13 @@ const props = defineProps<{
     <div class="flex items-center gap-3">
       <Button variant="outline" size="sm" as-child>
         <NuxtLink href="mailto:business@codewithantonio.com">
-          <ThumbsUpIcon />
+          <ThumbsUpIcon class="size-4" />
           <span class="hidden lg:block">Feedback</span>
         </NuxtLink>
       </Button>
       <Button variant="outline" size="sm" as-child>
         <NuxtLink href="mailto:business@codewithantonio.com">
-          <HeadphonesIcon />
+          <HeadphonesIcon class="size-4" />
           <span class="hidden lg:block">Need help?</span>
         </NuxtLink>
       </Button>

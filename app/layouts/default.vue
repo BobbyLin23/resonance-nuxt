@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import { useCookies } from '@vueuse/integrations/useCookies'
-
-const cookies = useCookies(['sidebar_state'])
-const defaultOpen = computed(() => cookies.get('sidebar_state') === 'true')
+const sidebarState = useCookie('sidebar_state', { default: () => 'true' })
+const defaultOpen = computed(() => sidebarState.value !== 'false')
 </script>
 
 <template>

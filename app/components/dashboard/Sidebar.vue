@@ -91,7 +91,13 @@ const othersMenuItems: MenuItem[] = [
                   'size-4! text-sidebar-foreground! group-data-[collapsible=icon]:hidden!',
               },
             }"
-          />
+          >
+            <template #fallback>
+              <Skeleton
+                class="h-8.5 w-full group-data-[collapsible=icon]:size-8 rounded-md border bg-white"
+              />
+            </template>
+          </OrganizationSwitcher>
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarHeader>
@@ -124,7 +130,13 @@ const othersMenuItems: MenuItem[] = [
                 userButtonAvatarBox: 'size-6!',
               },
             }"
-          />
+          >
+            <template #fallback>
+              <Skeleton
+                class="h-8.5 w-full group-data-[collapsible=icon]:size-8 rounded-md border bg-white"
+              />
+            </template>
+          </UserButton>
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarFooter>
