@@ -12,7 +12,7 @@ const props = defineProps<{
 <template>
   <div :class="cn('flex items-center justify-between border-b p-4', props.class)">
     <div class="flex items-center gap-2">
-      <SidebarTrigger />
+      <SidebarTrigger class="size-4" />
       <h1 class="text-lg font-semibold tracking-tight">
         {{ title }}
       </h1>

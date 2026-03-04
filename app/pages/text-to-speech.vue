@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import { defaultTTSValues } from '~/composables/useTtsForm'
+
+useHead({
+  title: 'Text to speech',
+})
 </script>
 
 <template>
