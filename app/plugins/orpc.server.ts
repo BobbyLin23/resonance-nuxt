@@ -7,12 +7,12 @@ import { router } from '~~/server/routers'
  *
  * @see {@link https://orpc.dev/docs/adapters/nuxt#optimize-ssr}
  */
-export default defineNuxtPlugin((nuxt) => {
-  const event = useRequestEvent()
+export default defineNuxtPlugin(() => {
+  // const event = useRequestEvent()
 
   const client = createRouterClient(router, {
     context: {
-      // headers: event?.headers, // provide headers if initial context required
+      // headers: event?.headers ?? {},
     },
   })
 

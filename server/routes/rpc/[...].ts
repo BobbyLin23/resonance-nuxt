@@ -17,7 +17,12 @@ const rpcHandler = new RPCHandler(router, {
 export default defineEventHandler(async (event) => {
   const request = toWebRequest(event)
 
-  const context = { user: { id: 'test', name: 'John Doe', email: 'john@doe.com' } }
+  const { userId, orgId } = event.context.auth()
+
+  const context = {
+    userId,
+    orgId,
+  }
 
   const { response } = await rpcHandler.handle(request, {
     prefix: '/rpc',

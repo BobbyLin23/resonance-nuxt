@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import type { TTSFormApi } from '~/composables/useTtsForm'
 import { useStore } from '@tanstack/vue-form'
-import { TTSFormKey } from '~/composables/useTtsForm'
 
 const form = inject(TTSFormKey) as TTSFormApi
 
@@ -10,9 +8,7 @@ const isSubmitting = useStore(form.store, s => (s as { isSubmitting: boolean }).
 
 <template>
   <div class="border-b border-dashed p-4">
-    <p class="text-sm text-muted-foreground">
-      Voice selector coming soon
-    </p>
+    <VoiceSelector />
   </div>
   <div class="p-4 flex-1">
     <FieldGroup class="gap-8">

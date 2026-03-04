@@ -27,6 +27,7 @@ export default defineNuxtPlugin(() => {
   return {
     provide: {
       orpc,
+      client,
     },
   }
 })
